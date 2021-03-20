@@ -886,7 +886,6 @@ importers:
       '@pnpm/link-bins': 'link:'
       '@pnpm/package-bins': workspace:4.0.11
       '@pnpm/read-modules-dir': workspace:2.0.3
-      '@pnpm/read-package-json': workspace:3.1.9
       '@pnpm/read-project-manifest': workspace:1.1.7
       '@pnpm/types': workspace:6.4.0
       '@types/is-windows': ^1.0.0
@@ -907,7 +906,6 @@ importers:
       '@pnpm/error': link:../error
       '@pnpm/package-bins': link:../package-bins
       '@pnpm/read-modules-dir': link:../read-modules-dir
-      '@pnpm/read-package-json': link:../read-package-json
       '@pnpm/read-project-manifest': link:../read-project-manifest
       '@pnpm/types': link:../types
       '@zkochan/cmd-shim': 5.1.0
@@ -1426,12 +1424,12 @@ importers:
       '@pnpm/package-bins': 'link:'
       '@pnpm/types': workspace:6.4.0
       '@types/node': ^14.14.33
+      fast-glob: ^3.2.4
       is-subdir: ^1.1.1
-      p-filter: ^2.1.0
     dependencies:
       '@pnpm/types': link:../types
+      fast-glob: 3.2.5
       is-subdir: 1.2.0
-      p-filter: 2.1.0
     devDependencies:
       '@pnpm/package-bins': 'link:'
       '@types/node': 14.14.35

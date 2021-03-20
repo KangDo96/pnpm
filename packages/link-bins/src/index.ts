@@ -4,8 +4,7 @@ import path from 'path'
 import PnpmError from '@pnpm/error'
 import binify, { Command } from '@pnpm/package-bins'
 import readModulesDir from '@pnpm/read-modules-dir'
-import { fromDir as readPackageJsonFromDir } from '@pnpm/read-package-json'
-import { safeReadProjectManifestOnly } from '@pnpm/read-project-manifest'
+import { safeReadProjectManifestOnly, readJsonFile } from '@pnpm/read-project-manifest'
 import { DependencyManifest } from '@pnpm/types'
 import cmdShim from '@zkochan/cmd-shim'
 import isSubdir from 'is-subdir'
@@ -187,7 +186,7 @@ async function getBinNodePaths (target: string): Promise<string[]> {
 
 async function safeReadPkgJson (pkgDir: string): Promise<DependencyManifest | null> {
   try {
-    return await readPackageJsonFromDir(pkgDir) as DependencyManifest
+    return (await readJsonFile(path.join(pkgDir, 'package.json'))).data as DependencyManifest
   } catch (err) {
     if ((err as NodeJS.ErrnoException).code === 'ENOENT') {
       return null
