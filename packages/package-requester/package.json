@@ -39,7 +39,6 @@
     "@pnpm/core-loggers": "workspace:5.0.3",
     "@pnpm/error": "workspace:1.4.0",
     "@pnpm/fetcher-base": "workspace:9.0.4",
-    "@pnpm/read-package-json": "workspace:3.1.9",
     "@pnpm/resolver-base": "workspace:7.1.1",
     "@pnpm/store-controller-types": "workspace:10.0.0",
     "@pnpm/types": "workspace:6.4.0",

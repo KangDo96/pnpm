@@ -19,9 +19,6 @@
       "path": "../read-modules-dir"
     },
     {
-      "path": "../read-package-json"
-    },
-    {
       "path": "../read-project-manifest"
     },
     {

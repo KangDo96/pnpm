@@ -49,7 +49,6 @@ import {
   write as writeModulesYaml,
 } from '@pnpm/modules-yaml'
 import packageIsInstallable from '@pnpm/package-is-installable'
-import { fromDir as readPackageFromDir } from '@pnpm/read-package-json'
 import { readProjectManifestOnly, safeReadProjectManifestOnly } from '@pnpm/read-project-manifest'
 import {
   FetchPackageToStoreFunction,
@@ -59,6 +58,7 @@ import {
 import symlinkDependency, { symlinkDirectRootDependency } from '@pnpm/symlink-dependency'
 import { DependencyManifest, HoistedDependencies, ProjectManifest, Registries } from '@pnpm/types'
 import * as dp from 'dependency-path'
+import loadJsonFile from 'load-json-file'
 import pLimit from 'p-limit'
 import pathAbsolute from 'path-absolute'
 import pathExists from 'path-exists'
@@ -817,7 +817,7 @@ async function linkAllBins (
               .filter(({ hasBin }) => hasBin)
               .map(async ({ dir }) => ({
                 location: dir,
-                manifest: await readPackageFromDir(dir) as DependencyManifest,
+                manifest: await loadJsonFile(path.join(dir, 'package.json')) as DependencyManifest,
               }))
           )
 

@@ -794,6 +794,7 @@ importers:
       '@pnpm/symlink-dependency': link:../symlink-dependency
       '@pnpm/types': link:../types
       dependency-path: link:../dependency-path
+      load-json-file: 6.2.0
       p-limit: 3.1.0
       path-absolute: 1.0.1
       path-exists: 4.0.0
@@ -816,7 +817,6 @@ importers:
       '@zkochan/rimraf': 1.0.0
       is-windows: 1.0.2
       isexe: 2.0.0
-      load-json-file: 6.2.0
       npm-run-all: 4.1.5
       sinon: 9.2.4
       tempy: 1.0.1
@@ -1462,7 +1462,6 @@ importers:
       '@pnpm/fetcher-base': workspace:9.0.4
       '@pnpm/logger': ^3.2.3
       '@pnpm/package-requester': 'link:'
-      '@pnpm/read-package-json': workspace:3.1.9
       '@pnpm/resolver-base': workspace:7.1.1
       '@pnpm/store-controller-types': workspace:10.0.0
       '@pnpm/types': workspace:6.4.0
@@ -1490,7 +1489,6 @@ importers:
       '@pnpm/core-loggers': link:../core-loggers
       '@pnpm/error': link:../error
       '@pnpm/fetcher-base': link:../fetcher-base
-      '@pnpm/read-package-json': link:../read-package-json
       '@pnpm/resolver-base': link:../resolver-base
       '@pnpm/store-controller-types': link:../store-controller-types
       '@pnpm/types': link:../types

@@ -18,7 +18,6 @@ import {
   FetchResult,
 } from '@pnpm/fetcher-base'
 import logger from '@pnpm/logger'
-import readPackage from '@pnpm/read-package-json'
 import {
   DirectoryResolution,
   Resolution,
@@ -523,7 +522,7 @@ async function writeJsonFile (filePath: string, data: Object) {
 }
 
 async function readBundledManifest (pkgJsonPath: string): Promise<BundledManifest> {
-  return pickBundledManifest(await readPackage(pkgJsonPath) as DependencyManifest)
+  return pickBundledManifest(await loadJsonFile(pkgJsonPath) as DependencyManifest)
 }
 
 async function tarballIsUpToDate (
